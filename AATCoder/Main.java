@@ -1,27 +1,21 @@
-import java.util.HashMap;
-import java.util.Scanner;
 
 public class Main {
 
-    public static int search(int arr[], int key) {
-        // Write your code here.
-        HashMap<Integer,Integer> m = new HashMap<>();
-        for(int i = 0; i < arr.length; i++){
-            if(m.containsKey(key)){
-                return m.get(key);
-            }
-            m.put(arr[i], i);
-        }
+    public static int Fib(int n){
 
-        return -1;
+        if (n == 0)
+        return 0;
+
+        else if (n == 1)
+        return 1;
+
+        return Fib(n-1) + Fib(n-2);
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        int n = 10;
-
-        
+        System.out.println(Fib(6));
+       
     }
     
 }

@@ -9,6 +9,7 @@ Compares nodes (temp1 == temp2).
 Stops when temp1 == temp2.
 Since these are different objects in memory, the condition temp1 == temp2 never becomes true, so the function returns null, leading to the NullPointerException.
  */
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class IntersectionOfTwoLinkedList {
@@ -76,6 +77,9 @@ public class IntersectionOfTwoLinkedList {
         
         Node temp1 = h1;
         Node temp2 = h2;
+
+        HashSet<Node> s = new HashSet<>();
+
         int size1=0;
 
         while(temp1!=null){
@@ -110,18 +114,63 @@ public class IntersectionOfTwoLinkedList {
             temp1=temp1.next;
             temp2=temp2.next;
         }
+
         
         return temp1;
     }
 
+    public static int findIntersection(Node firstHead, Node secondHead) {
+        //Write your code here
+        HashSet<Node> s = new HashSet<>();
+
+        Node t1 = firstHead;
+
+       
+        while (t1 != null) {
+            s.add(t1);
+            t1 = t1.next;
+        }
+
+        Node t2 = secondHead;
+
+        
+        while (t2 != null) {
+            if (s.contains(t2)) {
+                return t2.data; 
+            }
+            t2 = t2.next;
+        }
+
+        return -1;
+
+    }
+
+
 
     public static void main(String[] args) {
 
-        Node h1 = insert();
-        Node h2 = insert();
+        Node a = new Node(1);
+        Node b = new Node(2);
+        Node c = new Node(3);
+        Node d = new Node(4);
+        Node e = new Node(5);
+        Node f = new Node(6);
 
-        Node q = intersection(h1, h2);
+        
+        Node p = new Node(7);
+        Node q = new Node(8);
+        Node r = new Node(9);
 
-        System.out.println(q.data);
+        a.next = b;
+        b.next = c;
+        c.next = d;
+        d.next = e;
+        e.next = f;
+
+        p.next = q;
+        q.next = r;
+        r.next = c;
+
+        System.out.println(findIntersection(a, p));
     }
 }

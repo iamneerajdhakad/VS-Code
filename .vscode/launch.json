@@ -3,6 +3,55 @@
   "configurations": [
     {
       "type": "java",
+      "name": "findtargetforDuplicates",
+      "request": "launch",
+      "mainClass": "findtargetforDuplicates",
+      "projectName": "Coding_85d20842"
+    },
+    {
+      "type": "java",
+      "name": "findtarget",
+      "request": "launch",
+      "mainClass": "findtarget",
+      "projectName": "Coding_85d20842"
+    },
+    {
+      "type": "java",
+      "name": "findmin",
+      "request": "launch",
+      "mainClass": "findmin",
+      "projectName": "Coding_85d20842"
+    },
+    {
+      "type": "java",
+      "name": "SquareRoot",
+      "request": "launch",
+      "mainClass": "SquareRoot",
+      "projectName": "Coding_85d20842"
+    },
+    {
+      "type": "java",
+      "name": "LastOccurance",
+      "request": "launch",
+      "mainClass": "LastOccurance",
+      "projectName": "Coding_85d20842"
+    },
+    {
+      "type": "java",
+      "name": "FirstOccurance",
+      "request": "launch",
+      "mainClass": "FirstOccurance",
+      "projectName": "Coding_85d20842"
+    },
+    {
+      "type": "java",
+      "name": "BinarySearchalgo",
+      "request": "launch",
+      "mainClass": "BinarySearchalgo",
+      "projectName": "Coding_85d20842"
+    },
+    {
+      "type": "java",
       "name": "Main",
       "request": "launch",
       "mainClass": "Main",
