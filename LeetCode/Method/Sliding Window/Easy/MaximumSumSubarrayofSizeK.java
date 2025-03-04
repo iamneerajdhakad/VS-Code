@@ -8,6 +8,8 @@ public class MaximumSumSubarrayofSizeK {
         int sum = 0;
         int max = Integer.MIN_VALUE;
 
+        if(k>arr.length)    return Integer.MIN_VALUE;
+
         for(int  i = 0 ; i < k; i++){
            
             sum += arr[i];
@@ -46,6 +48,6 @@ public class MaximumSumSubarrayofSizeK {
         
     }
 
-    kne jkefnklrvnl
+    //kne jkefnklrvnl
     
 }

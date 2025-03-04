@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CeilingOfaNumber",
+      "request": "launch",
+      "mainClass": "CeilingOfaNumber",
+      "projectName": "Coding_85d20842"
+    },
+    {
+      "type": "java",
+      "name": "FindAllAnagramsinaString",
+      "request": "launch",
+      "mainClass": "FindAllAnagramsinaString",
+      "projectName": "Coding_85d20842"
+    },
+    {
+      "type": "java",
       "name": "findtargetforDuplicates",
       "request": "launch",
       "mainClass": "findtargetforDuplicates",
