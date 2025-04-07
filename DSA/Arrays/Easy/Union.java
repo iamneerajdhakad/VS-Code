@@ -7,14 +7,15 @@ The union of two arrays can be defined as the common and distinct elements in th
  */
 
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.List;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 public class Union {
 
-    public static ArrayList<Integer> Solution(int[] arr1, int[] arr2){
+    public static List<Integer> Solution(int[] arr1, int[] arr2){
         
-        HashSet<Integer> s = new HashSet<>();
+        TreeSet<Integer> s = new TreeSet<>();
         ArrayList<Integer> Union = new ArrayList<>();
 
         int n = arr1.length;
@@ -55,8 +56,6 @@ public class Union {
         arr1[i]= sc.nextInt();
 
         }
-
-        System.out.println();
 
         int n = sc.nextInt();
 

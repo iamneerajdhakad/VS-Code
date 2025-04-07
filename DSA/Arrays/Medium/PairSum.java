@@ -51,14 +51,14 @@ public class PairSum {
 
     public static void main(String[] args) {
 
-        Algo a = new Algo();
+        // Algo a = new Algo();
 
-        System.out.println("Using Brute Force Approach");
-        int[] arr1 = a.BruteForce(TemplateA.input(), 9);
-        System.out.println("Using Optimal Approach");
-        int[] arr2 = a.OptimalAlgo(TemplateA.input(), 9);
-        System.out.println(arr1[0]+","+arr1[1]);
+        // System.out.println("Using Brute Force Approach");
+        // int[] arr1 = a.BruteForce(TemplateA.input(), 9);
+        // System.out.println("Using Optimal Approach");
+        // int[] arr2 = a.OptimalAlgo(TemplateA.input(), 9);
+        // System.out.println(arr1[0]+","+arr1[1]);
         
-        System.out.println(arr2[0]+","+arr2[1]);
+        // System.out.println(arr2[0]+","+arr2[1]);
     }
 }

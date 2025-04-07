@@ -26,7 +26,7 @@ public class CountFrequency {
     }
 
     public static void main(String[] args) {
-        int[] arr = Template.input();
+        // int[] arr = Template.input();
         Solution(arr);
     }
 }

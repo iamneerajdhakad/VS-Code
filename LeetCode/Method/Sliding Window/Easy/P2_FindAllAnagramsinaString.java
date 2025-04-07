@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-public class FindAllAnagramsinaString {
+public class P2_FindAllAnagramsinaString {
     
     public static List<Integer> findAnagrams(String s, String p) {
 

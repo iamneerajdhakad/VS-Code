@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class MaximumSumSubarrayofSizeK {
+public class P1_MaximumSumSubarrayofSizeK {
 
     public static int MaxSub(int[] arr, int k){
 

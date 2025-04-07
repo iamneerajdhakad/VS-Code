@@ -26,7 +26,7 @@ public class SubarraywithsumKPositiveandNegative {
                 i++;
             }
             
-            max = Math.max(j-i+1, max);
+            max = Math.max(sum, max);
         }
         return max;
     }
@@ -41,9 +41,7 @@ public class SubarraywithsumKPositiveandNegative {
         int[] arr = new int[N];
 
         for(int i =0; i < N; i++){
-            
             arr[i]=sc.nextInt();
-
         }
 
         int k = sc.nextInt();
