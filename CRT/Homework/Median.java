@@ -21,7 +21,7 @@ public class Median {
             return average;
         }
     }
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         
         int[] arr = {90, 100, 78, 89, 67};
 

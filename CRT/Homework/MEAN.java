@@ -2,10 +2,10 @@ import java.util.Arrays;
 
 public class MEAN {
 
-    public static int findMean(int[] arr) {
+    public static double  findMean(int[] arr) {
         // code here
 
-        Arrays.sort(arr);
+        //Arrays.sort(arr);
 
         int sum = 0,n = arr.length;
         
@@ -14,7 +14,7 @@ public class MEAN {
             sum+=i;
         }
         
-        return sum/n;
+        return (double)sum/n;
     }
     
 }

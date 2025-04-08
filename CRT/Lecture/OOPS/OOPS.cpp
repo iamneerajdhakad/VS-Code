@@ -105,6 +105,69 @@ void inheritence(){
 
 }
 
+class Shape{
+
+public:
+    int number_of_sides;
+    double area;
+    string name;
+
+    Shape(){
+
+    }
+
+    Shape(string name){
+        this->name = name;
+    }
+
+    void print_area(){
+        cout<<name<<"'s area : "<<area<<endl;
+    }
+
+    void cal_area(double radius){
+
+        area = 3.142 * radius * radius;
+    }
+
+    void cal_area(int side){
+        area = side*side;
+    }
+
+    void cal_area(int l, int b){
+        area = l*b;
+    }
+
+
+
+};
+
+
+
+void understand_ploymorphism(){
+
+    Shape circle("circle");
+    double radii = 1;
+    circle.cal_area(radii);
+    circle.print_area();
+
+    Shape square("square");
+    int side = 1;
+    square.cal_area(side);
+    square.print_area();
+
+    Shape rectangle("rectangle");
+    int l = 6,b=9;
+    rectangle.cal_area(l,b);
+    rectangle.print_area();
+}
+
+
+void operator_overloading()[
+    
+]
+
+
+
 
 
 int main(){
@@ -113,6 +176,12 @@ int main(){
 
     // learning_Encapsulation();
 
-    inheritence();
+    //inheritence();
+
+    //understand_ploymorphism();
+
+    void operator_overloading();
+
+
 
 }
