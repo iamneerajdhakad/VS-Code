@@ -17,15 +17,12 @@ public:
 
 class student:public human{
 
-private:
-    float percentage;
-
-
 
 public:
 
     string name;
     int rollno;
+    float percentage;
     
 
     void  intro(){
@@ -56,6 +53,13 @@ public:
         this->rollno=rollno;
         this->percentage=percentage;
     }
+
+    student(student &obj){
+        this->name=obj.name;
+        this->rollno=obj.rollno;
+        this->percentage=obj.percentage;
+    }
+
 
 
 };
@@ -162,26 +166,108 @@ void understand_ploymorphism(){
 }
 
 
-void operator_overloading()[
+class Complex{
+
+public:
+    int real;
+    int imaginary;
+
+    Complex(){
+        this->real=0;
+        this->imaginary=0;
+    }
+
+    Complex(int real,int imaginary){
+        this->real=real;
+        this->imaginary=imaginary;
+    }
+
+
+    Complex operator+(Complex &c){
+
+        return Complex(this->real+c.real,this->imaginary+c.imaginary);
+
+    }
+
+    Complex operator+(int j){
     
-]
+        return Complex(this->real+j,this->imaginary+j);
+
+    }
+
+    Complex operator++(){
+
+        return Complex(++this->real,++this->imaginary);
+    }
+
+    Complex operator++(int){
+
+        return Complex(this->real++,this->imaginary++);
+    }
+
+    void print_number(){
+        cout<<this->real<<"+"<<this->imaginary<<"i\n";
+    }
+};
+
+void playing_with_imaginary_numbers(){
+
+    Complex c1(4,3);
+    Complex c2(2,3);
+    Complex c3 = c1 + c2;
+    c3.print_number();
+    int a = 3;
+    c3 = c1 + a;
+    c2++;
+    c2.print_number();
 
 
 
+    
+}
+
+
+
+void operator_overloading(){
+
+   
+
+
+}
+
+
+void playing_with_constructors(){
+
+    student raghav("raghav",1062,85);
+    student vishrut = raghav;
+    vishrut.intro();
+
+}
+
+
+
+void virtual_function(){
+
+}
 
 
 int main(){
 
     //getting_started_with_oops();
 
-    // learning_Encapsulation();
+    //learning_Encapsulation();
 
     //inheritence();
 
     //understand_ploymorphism();
 
-    void operator_overloading();
+    //operator_overloading();
 
+   
+    //playing_with_constructors();
 
+    // playing_with_imaginary_numbers();
+
+    virtual_function();
 
 }

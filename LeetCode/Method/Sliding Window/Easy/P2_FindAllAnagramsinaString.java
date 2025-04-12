@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.HashMap;
 import java.util.List;
 
 public class P2_FindAllAnagramsinaString {
@@ -7,28 +7,46 @@ public class P2_FindAllAnagramsinaString {
     public static List<Integer> findAnagrams(String s, String p) {
 
         List<Integer> l = new ArrayList<>();
-        HashSet<Character> h = new HashSet<>(); 
+        HashMap<Character,Integer> h = new HashMap<>(); 
 
         for(var i : p.toCharArray()){
-            h.add(i);
+            h.put(i,h.getOrDefault(i, 0)+1);
         }
 
-        int idx = 0,right = 0;
+        int right = 0;
 
-        for(int left = 0; left < s.length();){
+        while(right < s.length()){
 
-            if(right==p.length()+1) {
-                l.add(idx);
-                right++;
-                left++;
+            int left = right;
+
+            char ch = s.charAt(left);
+
+            if(h.containsKey(ch)){
+
+                boolean flag = false;
+                int count = 0;
+
+                for(int i = left; i < p.length(); i++){
+
+                    if(h.containsKey(s.charAt(i))){
+                        count++;
+                    }
+
+                    if(count==p.length()){
+                        flag=true;
+                    }
+
+                }
+
+                if(flag){
+                    l.add(left);
+                }
             }
 
-            else if(!h.contains(s.charAt(left)))    left++;
-
-            else if(right<p.length())   right++;
+            right++;
 
         }
-
+        
         return l;
     }
 
@@ -39,4 +57,4 @@ public class P2_FindAllAnagramsinaString {
 
         System.out.println(findAnagrams(s, p));
     }
-    mfsnlkrngl
+}dnked
